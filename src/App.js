@@ -5,9 +5,9 @@ import Counter from "./components/Counter";
 import "./App.css";
 
 function App() {
-  const [store, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <Context.Provider value={{ store, dispatch }}>
+    <Context.Provider value={{ state, dispatch }}>
       <div className="App">
         <DisplayCounter />
         <Counter />

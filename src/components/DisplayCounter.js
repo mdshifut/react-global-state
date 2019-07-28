@@ -8,5 +8,5 @@ const Counter = props => {
   );
 };
 
-const mapStateToProps = store => ({ count: store.count });
+const mapStateToProps = state => ({ count: state.count });
 export default connect(mapStateToProps)(Counter);

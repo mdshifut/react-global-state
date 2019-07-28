@@ -3,9 +3,9 @@ import { Context } from "../store/store";
 const connect = (mapStateToProps, mapDispatchToProps) => {
   return Component => {
     return props => {
-      const { store, dispatch } = useContext(Context);
+      const { state, dispatch } = useContext(Context);
 
-      const stateToProps = mapStateToProps && mapStateToProps(store);
+      const stateToProps = mapStateToProps && mapStateToProps(state);
       const dispatchToProps =
         mapDispatchToProps && mapDispatchToProps(dispatch);
       const updatedProps = { ...props, ...stateToProps, ...dispatchToProps };
